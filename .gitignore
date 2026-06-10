@@ -47,3 +47,6 @@ next-env.d.ts
 /public/Prints das telas
 /public/Sora.zip
 /public/Illustration exemple.svg
+
+.vercel
+/public/Diagrama

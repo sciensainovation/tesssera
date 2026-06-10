@@ -6,7 +6,6 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PageHero } from "@/components/ui/page-hero";
-import { Placeholder } from "@/components/ui/placeholder";
 import { LinkButton } from "@/components/ui/link-button";
 
 export async function generateMetadata({
@@ -68,11 +67,16 @@ export default async function PlatformFinopsPage({
       <Section invert>
         <Container>
           <SectionHeading title={f.screenshot.headline} />
-          <Placeholder
-            label={f.screenshot.diagramAlt}
-            ratio="16 / 6"
-            className="mt-12"
-          />
+          <div className="mt-12 overflow-hidden rounded-[16px] border border-line">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/finops-quotas.png"
+              alt={f.screenshot.diagramAlt}
+              width={1387}
+              height={874}
+              className="h-auto w-full"
+            />
+          </div>
           <div className="mt-10 flex justify-center" data-animate="fade-up">
             <LinkButton href={L(f.docsHref)} variant="secondary">
               {f.docsCta} <span aria-hidden>→</span>

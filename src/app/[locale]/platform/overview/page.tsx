@@ -7,7 +7,6 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PageHero } from "@/components/ui/page-hero";
-import { Placeholder } from "@/components/ui/placeholder";
 
 export async function generateMetadata({
   params,
@@ -68,11 +67,16 @@ export default async function PlatformOverviewPage({
       <Section>
         <Container>
           <SectionHeading title={o.architecture.headline} />
-          <Placeholder
-            label={o.architecture.diagramAlt}
-            ratio="16 / 6"
-            className="mt-12"
-          />
+          <div className="mt-12 rounded-[20px] border border-line bg-surface p-4 md:p-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/diagrama1.png"
+              alt={o.architecture.diagramAlt}
+              width={1680}
+              height={771}
+              className="mx-auto h-auto w-full"
+            />
+          </div>
           <div
             data-animate="cascade"
             className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2"
@@ -93,11 +97,16 @@ export default async function PlatformOverviewPage({
       <Section invert>
         <Container>
           <SectionHeading title={o.market.headline} />
-          <Placeholder
-            label={o.market.diagramAlt}
-            ratio="16 / 6"
-            className="mt-12"
-          />
+          <div className="mx-auto mt-12 max-w-[820px] rounded-[20px] bg-offwhite p-4 md:p-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/diagrama2.png"
+              alt={o.market.diagramAlt}
+              width={820}
+              height={540}
+              className="mx-auto h-auto w-full"
+            />
+          </div>
           <p
             className="section-sub mx-auto mt-8 text-center"
             data-animate="fade-up"

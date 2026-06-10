@@ -12,6 +12,11 @@ export function ValueGrid({ dict }: { dict: Dictionary }) {
   return (
     <Section>
       <Container>
+        {/* mobile: mock on top, above everything (desktop shows it in the center column) */}
+        <div className="mb-12 lg:hidden">
+          <AgentOsScene />
+        </div>
+
         <div className="flex flex-col items-center gap-5 text-center" data-animate="fade-up">
           <span className="accent-line" />
           <h2 className="t-h2 max-w-[760px] text-ink">{v.headline}</h2>

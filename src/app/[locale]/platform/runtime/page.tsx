@@ -6,7 +6,6 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PageHero } from "@/components/ui/page-hero";
-import { Placeholder } from "@/components/ui/placeholder";
 import { LinkButton } from "@/components/ui/link-button";
 
 export async function generateMetadata({
@@ -71,11 +70,16 @@ export default async function PlatformRuntimePage({
       <Section>
         <Container>
           <SectionHeading title={r.execution.headline} accent />
-          <Placeholder
-            label={r.execution.diagramAlt}
-            ratio="16 / 6"
-            className="mt-12"
-          />
+          <div className="mt-12 rounded-[20px] border border-line bg-surface p-4 md:p-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/diagrama3.png"
+              alt={r.execution.diagramAlt}
+              width={1764}
+              height={656}
+              className="mx-auto h-auto w-full"
+            />
+          </div>
           <div
             data-animate="cascade"
             className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2"
@@ -96,11 +100,16 @@ export default async function PlatformRuntimePage({
       <Section invert>
         <Container>
           <SectionHeading title={r.simulator.headline} />
-          <Placeholder
-            label={r.simulator.diagramAlt}
-            ratio="16 / 7"
-            className="mt-12"
-          />
+          <div className="mt-12 overflow-hidden rounded-[16px] border border-line">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/runtime-simulator.png"
+              alt={r.simulator.diagramAlt}
+              width={1384}
+              height={891}
+              className="h-auto w-full"
+            />
+          </div>
           <div className="mt-10 flex justify-center" data-animate="fade-up">
             <LinkButton href={L(r.docsHref)} variant="secondary">
               {r.docsCta} <span aria-hidden>→</span>
