@@ -9,7 +9,7 @@ const FEATURES: ReadonlyArray<{ title: string; desc: string; video: string }> = 
   {
     title: "Maturidade Runtime",
     desc: "Atinja a maturidade runtime e saia na frente de 80% dos projetos de agentes.",
-    video: "/Videos/data.mp4",
+    video: "/Videos/isometric.mp4",
   },
   {
     title: "FrameWork",

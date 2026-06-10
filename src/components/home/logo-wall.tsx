@@ -23,11 +23,16 @@ const LOGOS: ReadonlyArray<readonly [string, string]> = [
   ["Mirae Asset", "mirae.png"],
 ];
 
-const VISIBLE = 5; // slots in the single row (matches Figma grid-cols-5)
 const HOLD = 2600; // ms each set stays still
 const SLIDE = 620; // ms slide-up duration
 
-function LogoImg({ entry }: { entry: readonly [string, string] }) {
+function LogoImg({
+  entry,
+  maxH,
+}: {
+  entry: readonly [string, string];
+  maxH: string;
+}) {
   const [name, file] = entry;
   return (
     <div className="flex h-1/2 items-center justify-center">
@@ -35,13 +40,24 @@ function LogoImg({ entry }: { entry: readonly [string, string] }) {
       <img
         src={`/logos/${file}`}
         alt={name}
-        className="logo-mono max-h-[51px] w-auto max-w-full object-contain opacity-70"
+        className={`logo-mono w-auto max-w-full object-contain opacity-70 ${maxH}`}
       />
     </div>
   );
 }
 
-export function LogoWall() {
+// Sliding reel: shows `visible` logos at a time, slides up to cycle through all.
+function LogoReel({
+  visible,
+  slotH,
+  maxH,
+  className,
+}: {
+  visible: number;
+  slotH: string;
+  maxH: string;
+  className: string;
+}) {
   const [base, setBase] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -51,7 +67,7 @@ export function LogoWall() {
     const id = setInterval(() => {
       setAnimating(true);
       slide = setTimeout(() => {
-        setBase((b) => (b + VISIBLE) % LOGOS.length);
+        setBase((b) => (b + visible) % LOGOS.length);
         setAnimating(false);
       }, SLIDE);
     }, HOLD + SLIDE);
@@ -59,41 +75,62 @@ export function LogoWall() {
       clearInterval(id);
       clearTimeout(slide);
     };
-  }, []);
+  }, [visible]);
 
   return (
-    <div className="rounded-[32px] border border-line bg-glass px-6 py-9 shadow-[0_24px_70px_rgba(0,0,0,0.12)] backdrop-blur-xl md:px-12 md:py-11">
+    <div className={className}>
+      {Array.from({ length: visible }).map((_, i) => {
+        const cur = LOGOS[(base + i) % LOGOS.length];
+        const nxt = LOGOS[(base + visible + i) % LOGOS.length];
+        return (
+          <div key={i} className={`relative overflow-hidden ${slotH}`}>
+            <div
+              className="flex h-[200%] flex-col"
+              style={{
+                transform: animating ? "translateY(-50%)" : "translateY(0)",
+                transition: animating
+                  ? `transform ${SLIDE}ms cubic-bezier(0.4,0,0.2,1)`
+                  : "none",
+              }}
+            >
+              <LogoImg entry={cur} maxH={maxH} />
+              <LogoImg entry={nxt} maxH={maxH} />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export function LogoWall() {
+  return (
+    <div className="rounded-[32px] border border-line bg-glass px-6 pb-9 pt-[60px] shadow-[0_24px_70px_rgba(0,0,0,0.12)] backdrop-blur-xl md:px-12 md:pb-11">
       <div className="grid grid-cols-2 gap-x-6 gap-y-3 md:grid-cols-4">
         {STATS.map((s) => (
-          <p key={s} className="text-center text-base text-body">
+          <p
+            key={s}
+            className="t-label text-center text-body md:text-base md:font-normal md:tracking-normal"
+          >
             {s}
           </p>
         ))}
       </div>
 
-      {/* single-row logo reel — each slot slides up to swap (entrance + exit) */}
-      <div className="mt-9 grid grid-cols-5 items-center gap-x-4 md:mt-12 md:gap-x-12">
-        {Array.from({ length: VISIBLE }).map((_, i) => {
-          const cur = LOGOS[(base + i) % LOGOS.length];
-          const nxt = LOGOS[(base + VISIBLE + i) % LOGOS.length];
-          return (
-            <div key={i} className="relative h-[75px] overflow-hidden">
-              <div
-                className="flex h-[200%] flex-col"
-                style={{
-                  transform: animating ? "translateY(-50%)" : "translateY(0)",
-                  transition: animating
-                    ? `transform ${SLIDE}ms cubic-bezier(0.4,0,0.2,1)`
-                    : "none",
-                }}
-              >
-                <LogoImg entry={cur} />
-                <LogoImg entry={nxt} />
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      {/* mobile: 2x2 grid, bigger logos */}
+      <LogoReel
+        visible={4}
+        slotH="h-[96px]"
+        maxH="max-h-[68px]"
+        className="mt-8 grid grid-cols-2 items-center gap-x-6 gap-y-4 md:hidden"
+      />
+      {/* desktop: single row of 5 */}
+      <LogoReel
+        visible={5}
+        slotH="h-[75px]"
+        maxH="max-h-[51px]"
+        className="mt-[75px] hidden grid-cols-5 items-center gap-x-12 md:grid"
+      />
     </div>
   );
 }
