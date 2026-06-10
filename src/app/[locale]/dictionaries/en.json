@@ -1,0 +1,934 @@
+{
+  "meta": {
+    "title": "Tessera, A plataforma AgentOS para IA em ambiente regulado",
+    "description": "Tessera é a plataforma AgentOS para empresas que operam agentes de IA em ambiente regulado, com governança auditável, controle de custo e integração nativa ao stack corporativo brasileiro."
+  },
+  "nav": {
+    "product": "Product",
+    "industries": "Industries",
+    "company": "Company",
+    "docs": "Docs",
+    "cta": "Agendar Discovery",
+    "productGroupTitle": "Plataforma",
+    "productItems": [
+      { "title": "Visão geral", "desc": "Arquitetura macro, posicionamento, o que a Tessera não é", "href": "/platform/overview" },
+      { "title": "Runtime & Execução", "desc": "Grafo de estado, supersteps, replay determinístico", "href": "/platform/runtime" },
+      { "title": "Compliance & Governance", "desc": "Audit trail, 4-eyes, PII, regulatory packs", "href": "/platform/governance" },
+      { "title": "FinOps", "desc": "Cost attribution, budget caps, dashboard CFO", "href": "/platform/finops" },
+      { "title": "Integrações", "desc": "300+ conectores, TOTVS, SAP, PIX, WhatsApp e mais", "href": "/platform/integrations" }
+    ],
+    "industriesItems": [
+      { "title": "Banking & Fintechs", "desc": "KYC, cobrança, back-office, BACEN 4.658", "href": "/industries/banking-fintechs" },
+      { "title": "Seguradoras", "desc": "Sinistros, underwriting, pós-venda", "href": "/industries/insurance" },
+      { "title": "Healthcare", "desc": "Triagem, agendamento, HIPAA nativo", "href": "/industries/healthcare" },
+      { "title": "Varejo Enterprise", "desc": "Omnichannel, personalização, logística", "href": "/industries/retail" },
+      { "title": "Telecom", "desc": "Atendimento, vendas, retenção proativa", "href": "/industries/telecom" }
+    ],
+    "companyItems": [
+      { "title": "Por que Sciensa", "desc": "Time brasileiro, caso próprio, source escrow", "href": "/why-sciensa" },
+      { "title": "Deployment", "desc": "Community → Enterprise → Air-Gapped", "href": "/deployment" },
+      { "title": "Pricing", "desc": "Modelo consumption-based, tiers por edition", "href": "/pricing" }
+    ],
+    "docsHref": "/docs/quickstart",
+    "ctaHref": "/discovery",
+    "recursosLabel": "Recursos",
+    "recursos": [
+      { "label": "Docs", "href": "/docs/quickstart" },
+      { "label": "Agendar Discovery", "href": "/discovery" }
+    ],
+    "productMega": { "tagline": "AgentOS para enterprise regulado.", "cta": "Ver a plataforma", "ctaHref": "/platform/overview" },
+    "industriesMega": { "tagline": "Feita para os setores mais exigentes.", "cta": "Ver todas as indústrias", "ctaHref": "/industries" },
+    "companyMega": { "tagline": "Construída por quem já opera agentes em produção.", "cta": "Conheça a Sciensa", "ctaHref": "/why-sciensa" }
+  },
+  "hero": {
+    "headline": "Leve seus agentes de IA para produção.",
+    "subline": "Tessera é a plataforma AgentOS para empresas que operam IA em ambiente regulado.",
+    "ctaPrimary": "Agendar Discovery",
+    "ctaPrimaryHref": "/discovery",
+    "ctaSecondary": "Contato",
+    "ctaSecondaryHref": "/discovery"
+  },
+  "logowall": {
+    "label": "Trusted by enterprises in regulated industries",
+    "items": ["Cliente A", "Cliente B", "Cliente C", "Anthropic", "AWS", "Google", "Microsoft"]
+  },
+  "value": {
+    "headline": "Opere IA com governança, escala e controle.",
+    "sub": "Uma fundação unificada para cada agente que você colocar em produção.",
+    "items": [
+      { "n": "01", "title": "Auditoria completa", "body": "Toda ação registrada de forma imutável. Replay de qualquer conversa, em qualquer data, para qualquer auditor." },
+      { "n": "02", "title": "Custo sob controle", "body": "Cada token atribuído a agente, cliente e canal em tempo real. Limites automáticos por unidade de negócio." },
+      { "n": "03", "title": "Decisões determinísticas", "body": "Regras de negócio que o agente nunca pode ignorar. O modelo decide o quê. A regra decide o se pode." },
+      { "n": "04", "title": "Integração nativa", "body": "300+ conectores prontos, TOTVS, SAP, Salesforce, PIX, WhatsApp Business. Uma integração, reutilizada em qualquer agente." },
+      { "n": "05", "title": "Escala enterprise", "body": "Multi-tenant nativo, cluster automático, zero downtime. De 100 para 50.000 conversas por dia sem reescrever nada." },
+      { "n": "06", "title": "Compliance por design", "body": "BACEN 4.658, LGPD, SOX e HIPAA já mapeados. Não são adendos. São pré-requisitos." },
+      { "n": "07", "title": "Seus dados ficam na sua cloud", "body": "BYOC nativo, Bring Your Own Cloud. Seus dados nunca saem da sua infraestrutura. Nenhum outro player oferece isso como padrão." },
+      { "n": "08", "title": "Personas que não fogem do script", "body": "Defina a voz e o tom de cada agente. Teste variações declarativamente com A/B automático. Enforcement em todas as interações." }
+    ]
+  },
+  "platform": {
+    "headline": "The AgentOS for enterprise scale.",
+    "sub": "Construída do zero para determinismo, governança e operação contínua.",
+    "diagramAlt": "Diagrama das 5 camadas da plataforma",
+    "blocks": [
+      { "title": "Interaction Surfaces", "body": "Conversacional · Programático · Event-driven · A2A · Scheduled" },
+      { "title": "Runtime & Execução", "body": "Grafo de estado distribuído. Execução determinística com replay completo." },
+      { "title": "Compliance & Governance", "body": "Audit trail imutável, PII nativa, 4-eyes, pacotes regulatórios." },
+      { "title": "FinOps", "body": "Cost attribution multidimensional, budget caps, dashboard CFO." },
+      { "title": "Connectivity & Action", "body": "LLMs, ERPs, CRMs, canais, dados, padrões enterprise nativos." },
+      { "title": "BRMS", "body": "Motor de regras embarcado. Decisões determinísticas e probabilísticas no mesmo agente." }
+    ],
+    "cta": "Ver arquitetura completa",
+    "ctaHref": "/platform/overview"
+  },
+  "industries": {
+    "headline": "Feita para os setores mais exigentes.",
+    "linkLabel": "Ver casos",
+    "items": [
+      { "title": "Banking & Fintechs", "body": "KYC, cobrança, back-office com compliance BACEN nativo.", "href": "/industries/banking-fintechs" },
+      { "title": "Seguradoras", "body": "Sinistros, underwriting e atendimento pós-venda.", "href": "/industries/insurance" },
+      { "title": "Healthcare", "body": "Triagem, agendamento e suporte com HIPAA nativo.", "href": "/industries/healthcare" },
+      { "title": "Varejo Enterprise", "body": "Omnichannel, personalização e suporte pós-venda.", "href": "/industries/retail" },
+      { "title": "Telecom", "body": "Atendimento, vendas e retenção com BRMS.", "href": "/industries/telecom" }
+    ]
+  },
+  "team": {
+    "headline": "Um time brasileiro que constrói e opera ao seu lado.",
+    "body": "Engenharia, implementação e gerência residentes no Brasil, treinando seu time em paralelo, desde o primeiro dia.",
+    "mediaAlt": "Vídeo ou imagem do time"
+  },
+  "why": {
+    "headline": "Construída por quem já opera agentes em produção.",
+    "items": [
+      { "title": "Caso próprio em produção desde 2024", "body": "Sciensa opera agentes bancários. Tessera nasceu desse caso. Você não está sendo cobaia." },
+      { "title": "Multi-vendor por princípio", "body": "Não revendemos AWS, Anthropic, Google ou Microsoft. Recomendamos a combinação certa." },
+      { "title": "Compliance PT-BR como pré-requisito", "body": "LGPD, BACEN 4.658 e exigências de auditoria brasileira já estão na plataforma." },
+      { "title": "Autonomia garantida", "body": "Seu time treinado em paralelo. Código-fonte em escrow legal para Enterprise e Air-Gapped." }
+    ],
+    "cta": "Conheça a Sciensa",
+    "ctaHref": "/why-sciensa"
+  },
+  "cta": {
+    "title": "Pronto para operar IA de verdade?",
+    "sub": "60 minutos · sem custo · sob NDA · parecer de viabilidade em 7 dias",
+    "button": "Agendar minha Discovery",
+    "buttonHref": "/discovery"
+  },
+  "platformOverview": {
+    "meta": { "title": "Plataforma, Visão geral | Tessera" },
+    "breadcrumb": ["Home", "Plataforma", "Overview"],
+    "hero": {
+      "headline": "AgentOS para enterprise regulado.",
+      "subline": "Não é um framework com compliance colado por cima. É uma plataforma construída do zero para determinismo, governança e escala."
+    },
+    "notTessera": {
+      "headline": "O que a Tessera não é",
+      "items": [
+        { "title": "Não é um framework", "body": "Frameworks são ferramentas de construção. Tessera é um sistema de operação, com runtime, governance e FinOps integrados." },
+        { "title": "Não é uma vertical", "body": "Não foi construída para um único setor. Foi construída para qualquer empresa que precise de garantias técnicas defensáveis." },
+        { "title": "Não é um chatbot builder", "body": "Tessera opera agentes em produção corporativa, conversacionais, programáticos, event-driven, A2A e scheduled." }
+      ]
+    },
+    "architecture": {
+      "headline": "Arquitetura em cinco camadas",
+      "diagramAlt": "Diagrama detalhado das 5 camadas",
+      "layers": [
+        { "title": "Interaction Surfaces", "body": "5 modos de comunicação: conversacional, programático, event-driven, A2A, scheduled. Mesmo runtime, qualquer canal." },
+        { "title": "Runtime, Agent Core", "body": "Orquestrador, tool calling, memória, middleware, BRMS, identity & persona. O coração da plataforma." },
+        { "title": "Foundation Services", "body": "Multi-tenancy, lifecycle, policy engine, quotas, secrets vault. Operação enterprise por design." },
+        { "title": "Connectivity & Action", "body": "LLM providers, enterprise systems, data layer, domain rails, custom tools. O agente alcança o mundo externo." }
+      ]
+    },
+    "market": {
+      "headline": "Posicionamento de mercado",
+      "diagramAlt": "Quadrante: Enterprise + Operacional × Multi-vendor",
+      "body": "Tessera é o único player no quadrante Enterprise + Multi-vendor agnóstico. LangGraph, CrewAI, Google ADK são frameworks de desenvolvimento. AWS Bedrock e Azure AI Agent Service são enterprise mas com lock-in."
+    },
+    "differentials": {
+      "headline": "10 capabilities que nenhum outro player entrega hoje.",
+      "sub": "Derivado da análise comparativa com LangGraph, CrewAI, MS Agent FW, DeepAgents e Google ADK.",
+      "items": [
+        { "title": "BYOC, Bring Your Own Cloud", "body": "Seus dados nunca saem da sua infraestrutura. A Tessera roda na sua cloud, AWS, GCP ou Azure, sem nenhum dado trafegando para fora. Nenhum outro player oferece BYOC como padrão." },
+        { "title": "A/B de personas declarativo", "body": "Defina múltiplas personas por agente, ex: \"Diana cordial\" vs \"Suzana assertiva\". Teste qual converte melhor. Rollback automático se a nova persona não performa. Sem reescrever o agente." },
+        { "title": "Voice profile registry", "body": "Cada agente tem uma voz definida, tom, vocabulário, limites de resposta. Enforcement em todas as interações e canais. O agente nunca foge do script da marca." },
+        { "title": "Determinismo replayable + Actor Model", "body": "Runtime determinístico combinado com Actor Model nativamente. Replay integral a partir de checkpoint. Nenhum concorrente entrega as duas coisas juntas." },
+        { "title": "Multi-tenant enterprise completo", "body": "RBAC + budget caps + 4-eyes + audit imutável em uma plataforma. Isolamento real por arquitetura, não por configuração." },
+        { "title": "Pacotes regulatórios prontos", "body": "BACEN 4.658, LGPD, SOX, HIPAA e ISO 42001, cada um com policies aplicáveis, matriz ameaça → controle → evidência pronta para auditoria." },
+        { "title": "Cost governance com kill-switch", "body": "Dashboard CFO com visibilidade em tempo real e kill-switch automático por tenant. Nenhum outro player tem isso." },
+        { "title": "BRMS embarcado no mesmo agente", "body": "Decisões determinísticas e probabilísticas convivendo no mesmo grafo. O LLM e a regra de negócio, juntos, sem arquitetura separada." },
+        { "title": "300+ conectores enterprise nativos", "body": "ERP brasileiro (TOTVS, SAP, Oracle), bancário BR (PIX, SWIFT, KYC), CRM, canais, todos com padrões EIP nativos (retry, circuit breaker, dead-letter queue)." },
+        { "title": "Stack JVM battle-tested em banco BR", "body": "Construída e operada em produção bancária brasileira desde 2024. O ambiente de TI dos maiores bancos do país roda em JVM, a Tessera encaixa sem fricção." }
+      ]
+    },
+    "layerLinks": {
+      "headline": "Aprofunde em cada camada",
+      "items": [
+        { "title": "Runtime & Execução", "body": "Grafo de estado, supersteps, replay determinístico.", "href": "/platform/runtime" },
+        { "title": "Compliance & Governance", "body": "Audit trail, 4-eyes, PII, regulatory packs.", "href": "/platform/governance" },
+        { "title": "FinOps", "body": "Cost attribution, budget caps, dashboard CFO.", "href": "/platform/finops" },
+        { "title": "Integrações", "body": "300+ conectores enterprise nativos.", "href": "/platform/integrations" }
+      ]
+    }
+  },
+  "platformRuntime": {
+    "meta": { "title": "Plataforma, Runtime & Execução | Tessera" },
+    "breadcrumb": ["Home", "Plataforma", "Runtime"],
+    "hero": {
+      "headline": "Execução determinística. Replay completo. Nenhuma conversa perdida.",
+      "subline": "O runtime da Tessera é um grafo de estado distribuído construído sobre Actor Model, com supersteps atômicos, checkpoint automático e resiliência operacional por design."
+    },
+    "principles": {
+      "headline": "3 princípios não-negociáveis",
+      "items": [
+        { "label": "Princípio 1", "title": "Determinismo por design", "body": "Todo agente é um grafo executável com replay integral a partir de checkpoint. O que aconteceu às 14h22 é recuperável byte a byte para auditoria." },
+        { "label": "Princípio 2", "title": "Hexagonalidade", "body": "O domínio é isolado da infraestrutura. Troque cloud, banco, modelo LLM, sem reescrever o agente." },
+        { "label": "Princípio 3", "title": "Distribuição nativa", "body": "Construída sobre Actor Model. Escala horizontalmente em cluster com tolerância a falhas e back-pressure controlado." }
+      ]
+    },
+    "execution": {
+      "headline": "Execução em supersteps",
+      "diagramAlt": "Diagrama sequencial: mensagem → superstep 1 → superstep 2 → resposta + checkpoint",
+      "items": [
+        { "title": "Replay determinístico", "body": "Qualquer conversa pode ser reproduzida do início até qualquer ponto, com inputs externos mockados, para análise forense ou debugging." },
+        { "title": "Audit trail completo", "body": "Toda transição de estado, toda invocação de modelo, toda chamada de ferramenta registrada com correlation ID e timestamp imutável." },
+        { "title": "Resiliência operacional", "body": "Crash de container, falha de banco, indisponibilidade de LLM, absorvidos sem perda de conversa em andamento." },
+        { "title": "Tessera Simulator", "body": "Replay de qualquer caso real ou sintético. Estado observável passo a passo. Prontidão forense para auditoria." }
+      ]
+    },
+    "simulator": {
+      "headline": "Tessera Simulator",
+      "diagramAlt": "Screenshot: Simulator com grafo de execução, breakpoints, watches e custo por execução"
+    },
+    "docsCta": "Ver documentação técnica",
+    "docsHref": "/docs/platform/runtime"
+  },
+  "discovery": {
+    "meta": { "title": "Agende sua Discovery | Tessera" },
+    "breadcrumb": ["Home", "Discovery"],
+    "hero": {
+      "headline": "Agende sua Discovery.",
+      "subline": "60 minutos · sem custo · sob NDA. Mapeamos seu cenário, qualificamos o fit e definimos os próximos passos juntos."
+    },
+    "info": [
+      { "title": "O que acontece", "body": "Mapeamento do seu cenário regulatório e de integração. Qualificação de fit técnico e comercial. Definição de próximos passos." },
+      { "title": "O que você recebe", "body": "Parecer de viabilidade por escrito em até 7 dias úteis, que você pode usar internamente mesmo se decidir não avançar." },
+      { "title": "Contato direto", "body": "tessera@sciensa.ai · sciensa.ai/tessera/discovery" }
+    ],
+    "form": {
+      "fields": {
+        "name": "Nome",
+        "namePlaceholder": "Seu nome completo",
+        "company": "Empresa",
+        "companyPlaceholder": "Nome da empresa",
+        "role": "Cargo",
+        "rolePlaceholder": "Seu cargo",
+        "email": "E-mail corporativo",
+        "emailPlaceholder": "email@empresa.com",
+        "phone": "Telefone",
+        "phonePlaceholder": "(11) 9 0000-0000",
+        "sector": "Setor",
+        "sectorPlaceholder": "Selecione um setor",
+        "sectorOptions": ["Banking", "Seguradoras", "Healthcare", "Varejo", "Telecom", "Outro"]
+      },
+      "submit": "Enviar solicitação",
+      "note": "Tessera é desenvolvida para empresas com receita acima de R$ 500 milhões em setores regulados. A Discovery é gratuita e define juntos se há fit, sem compromisso de avanço.",
+      "successTitle": "Solicitação recebida.",
+      "successBody": "Obrigado. Nossa equipe retorna em até 2 dias úteis para agendar sua sessão de Discovery."
+    }
+  },
+  "platformGovernance": {
+    "meta": { "title": "Plataforma, Compliance & Governance | Tessera" },
+    "breadcrumb": ["Home", "Plataforma", "Compliance & Governance"],
+    "hero": {
+      "headline": "Quando o regulador perguntar, você tem a resposta.",
+      "subline": "Compliance não é um módulo adicionado à Tessera. É a fundação sobre a qual ela foi construída."
+    },
+    "capabilities": {
+      "headline": "Capabilities de compliance",
+      "items": [
+        { "title": "Audit trail imutável", "body": "Event sourcing com log append-only e hash criptográfico. Exportável para auditoria interna ou regulatória a qualquer momento." },
+        { "title": "Aprovação 4-eyes", "body": "Ações sensíveis pausam o agente e exigem segundo aprovador automaticamente. Workflow integrado, correlation completa." },
+        { "title": "Anonimização de PII nativa", "body": "CPF, CNPJ, RG, CNH, cartão, e-mail, telefone reconhecidos automaticamente. Política hash/mask/redact configurável por tenant." },
+        { "title": "Human-in-the-loop nativo", "body": "Ações críticas pausam o agente, notificam responsável, retomam após decisão humana, mantendo correlation completa." },
+        { "title": "Regulatory packs prontos", "body": "LGPD, BACEN 4.658, EU AI Act, SOX, HIPAA, ISO 42001, traduzidos em policies aplicáveis, com matriz ameaça → controle → evidência." },
+        { "title": "BRMS embarcado", "body": "Decisões que não podem ser probabilísticas, limites de crédito, elegibilidade, underwriting, ficam fora do alcance do LLM." },
+        { "title": "Voice profile registry", "body": "Cada agente tem uma voz definida, tom, vocabulário, limites de resposta. Enforcement automático em todas as interações e canais. O agente nunca foge da voz da marca." },
+        { "title": "A/B de personas declarativo", "body": "Defina múltiplas personas por agente e teste variações de comportamento. Rollback automático se a nova persona não performa. Nenhum outro player oferece isso." }
+      ]
+    },
+    "table": {
+      "headline": "Conformidade por framework regulatório",
+      "headers": ["Framework", "Cobertura na Tessera", "Mecanismo"],
+      "rows": [
+        { "framework": "BACEN 4.658", "coverage": "Detecção e tratamento de incidentes, trilha estruturada", "mechanism": "Audit trail imutável + alertas + incident log" },
+        { "framework": "LGPD", "coverage": "Anonimização demonstrável em trânsito e em log", "mechanism": "PII redaction nativa + políticas configuráveis" },
+        { "framework": "EU AI Act", "coverage": "Human oversight, logging automático, robustness", "mechanism": "Human-in-the-loop + audit trail + eval suite" },
+        { "framework": "SOX", "coverage": "Controles de acesso, audit trail financeiro", "mechanism": "RBAC multi-tenant + 4-eyes + FinOps audit" },
+        { "framework": "HIPAA", "coverage": "Anonimização de dados clínicos, acesso controlado", "mechanism": "PII nativa + RBAC + isolamento por tenant" }
+      ]
+    },
+    "docsCta": "Ver documentação técnica",
+    "docsHref": "/docs/capabilities/compliance"
+  },
+  "platformFinops": {
+    "meta": { "title": "Plataforma, FinOps | Tessera" },
+    "breadcrumb": ["Home", "Plataforma", "FinOps"],
+    "hero": {
+      "headline": "Saiba exatamente quanto cada agente gasta. Sempre.",
+      "subline": "Cost attribution multidimensional, budget caps automáticos e reconciliação em tempo real, sem esperar a fatura do vendor LLM."
+    },
+    "capabilities": {
+      "headline": "Capabilities de FinOps",
+      "items": [
+        { "title": "Cost attribution multidimensional", "body": "Todo token atribuído a tenant, ambiente, agente, conversa, canal e usuário simultaneamente." },
+        { "title": "Budget caps hard e soft", "body": "Limites por unidade de negócio com alertas progressivos. Parada automática se excedido. Kill-switch manual disponível." },
+        { "title": "Reconciliação em tempo real", "body": "Relatórios financeiros disponíveis intraday. Prontos para fechamento mensal sem esperar fatura do vendor LLM." },
+        { "title": "Otimização automática de modelo", "body": "Tessera detecta padrões e recomenda troca (ex: Sonnet → Haiku em conversas simples). Economia média de 40–60%." }
+      ]
+    },
+    "screenshot": {
+      "headline": "Admin, Quotas e Dashboard CFO",
+      "diagramAlt": "Screenshot: Admin/Quotas com limites por tenant × ambiente, top consumers, burst tokens"
+    },
+    "docsCta": "Ver documentação técnica",
+    "docsHref": "/docs/capabilities/finops"
+  },
+  "platformIntegrations": {
+    "meta": { "title": "Plataforma, Integrações | Tessera" },
+    "breadcrumb": ["Home", "Plataforma", "Integrações"],
+    "hero": {
+      "headline": "Conectado ao stack que você já tem.",
+      "subline": "300+ conectores enterprise nativos. Uma integração feita, reutilizada em qualquer agente. Sem desenvolvimento custom."
+    },
+    "connectors": {
+      "headline": "Conectores por categoria",
+      "categories": [
+        { "label": "LLM Providers", "items": ["Anthropic Claude", "OpenAI GPT", "Google Gemini", "AWS Bedrock", "Modelos privados"] },
+        { "label": "ERP", "items": ["TOTVS Protheus", "TOTVS RM", "Datasul", "SAP", "Oracle", "Senior"] },
+        { "label": "CRM", "items": ["Salesforce", "ServiceNow", "HubSpot", "Zendesk"] },
+        { "label": "Bancário BR", "items": ["PIX", "SWIFT", "KYC providers", "Serasa", "Boa Vista", "Quod"] },
+        { "label": "Canais", "items": ["WhatsApp Business", "Telegram", "Instagram", "Email", "SMS", "Voice / Twilio"] },
+        { "label": "Identidade & Secrets", "items": ["OIDC", "SAML", "LDAP", "Active Directory", "Vault", "AWS Secrets Manager"] },
+        { "label": "Observabilidade", "items": ["OpenTelemetry", "Prometheus", "Grafana", "Datadog", "Langfuse"] },
+        { "label": "Genéricos", "items": ["REST", "GraphQL", "SOAP", "gRPC", "JDBC", "MCP client/server"] }
+      ]
+    }
+  },
+  "industriesIndex": {
+    "meta": { "title": "Indústrias | Tessera" },
+    "breadcrumb": ["Home", "Indústrias"],
+    "hero": {
+      "headline": "Feita para os setores mais exigentes.",
+      "subline": "Cada setor tem suas próprias exigências regulatórias, sistemas legados e casos de uso. A Tessera foi construída para atender cada um deles, não de forma genérica."
+    },
+    "linkLabel": "Ver casos de uso",
+    "items": [
+      { "slug": "banking-fintechs", "title": "Banking e Fintechs", "body": "Cobrança conversacional, KYC automatizado, back-office com compliance BACEN 4.658 nativo." },
+      { "slug": "insurance", "title": "Seguradoras", "body": "Triagem de sinistros, underwriting com BRMS, atendimento pós-venda por apólice ativa." },
+      { "slug": "healthcare", "title": "Healthcare Corporativo", "body": "Triagem com human-in-the-loop, agendamento hospitalar, anonimização HIPAA-equivalente nativa." },
+      { "slug": "retail", "title": "Varejo Enterprise", "body": "Atendimento omnichannel, personalização com guardrails, suporte pós-venda integrado." },
+      { "slug": "telecom", "title": "Telecom", "body": "Atendimento técnico multi-canal, vendas com BRMS para elegibilidade de plano, retenção proativa." }
+    ]
+  },
+  "industryPages": {
+    "banking-fintechs": {
+      "meta": { "title": "Banking & Fintechs | Tessera" },
+      "breadcrumb": ["Home", "Indústrias", "Banking & Fintechs"],
+      "hero": {
+        "headline": "IA em produção bancária. Com compliance BACEN nativo.",
+        "subline": "Construída por quem já opera agentes IA em banco brasileiro, com todas as exigências regulatórias como pré-requisito, não adendo.",
+        "cta": "Agendar Discovery para Banking"
+      },
+      "useCases": {
+        "headline": "Casos de uso",
+        "items": [
+          { "label": "Caso de uso 01", "title": "Cobrança conversacional", "body": "Determinismo financeiro com BRMS para regras de elegibilidade de oferta. Audit trail completo de cada negociação. Handoff humano regulamentado para casos críticos." },
+          { "label": "Caso de uso 02", "title": "Onboarding KYC automatizado", "body": "Integração nativa com KYC providers (Serasa, Boa Vista, Quod). BRMS para decisões de elegibilidade. Anonimização de PII em todas as etapas." },
+          { "label": "Caso de uso 03", "title": "Atendimento regulamentado", "body": "Handoff humano com correlação completa. Audit trail de cada interação exportável para BACEN. Human-in-the-loop para situações sensíveis." },
+          { "label": "Caso de uso 04", "title": "Back-office com 4-eyes", "body": "Aprovação 4-eyes nativa para movimentações acima de threshold. Log imutável de quem aprovou o quê e quando." }
+        ]
+      },
+      "whyTessera": {
+        "headline": "Por que Tessera para Banking",
+        "items": [
+          { "title": "BACEN 4.658 nativo", "body": "Detecção e tratamento de incidentes com trilha estruturada. Pronto para entrega ao regulador." },
+          { "title": "Conectores bancários BR", "body": "PIX, SWIFT, KYC providers, score de crédito, integrados com padrões EIP nativos." },
+          { "title": "Stack JVM battle-tested", "body": "Construída para o ambiente de produção bancário brasileiro. Sem fricção com o stack existente." }
+        ]
+      },
+      "ctaBanner": { "title": "Pronto para operar IA em banco?", "sub": "60 minutos · sem custo · sob NDA", "button": "Agendar Discovery para Banking" }
+    },
+    "insurance": {
+      "meta": { "title": "Seguradoras | Tessera" },
+      "breadcrumb": ["Home", "Indústrias", "Seguradoras"],
+      "hero": {
+        "headline": "IA para seguradoras que precisam de mais que automação.",
+        "subline": "Triagem, underwriting e atendimento, com decisões determinísticas, integração a sistemas legados e audit trail para SUSEP.",
+        "cta": "Agendar Discovery para Seguradoras"
+      },
+      "useCases": {
+        "headline": "Casos de uso",
+        "items": [
+          { "label": "01", "title": "Triagem de sinistros", "body": "Integração nativa a sistemas legados de sinistros. Classificação automatizada com BRMS. Escalation para perito humano quando necessário." },
+          { "label": "02", "title": "Underwriting com BRMS", "body": "Avaliação de risco multi-fator com decisões determinísticas. Regras editáveis por analistas de negócio, sem desenvolvedores." },
+          { "label": "03", "title": "Atendimento pós-venda", "body": "Personalização contextual baseada em apólice ativa. Integração a dados de contrato e histórico do cliente." }
+        ]
+      },
+      "ctaBanner": { "title": "Vamos conversar sobre o seu cenário?", "sub": "60 minutos · sem custo · sob NDA", "button": "Agendar Discovery para Seguradoras" }
+    },
+    "healthcare": {
+      "meta": { "title": "Healthcare | Tessera" },
+      "breadcrumb": ["Home", "Indústrias", "Healthcare"],
+      "hero": {
+        "headline": "IA na saúde com o controle que a regulação exige.",
+        "subline": "Human-in-the-loop obrigatório, anonimização HIPAA-equivalente nativa e integração a sistemas hospitalares, por design.",
+        "cta": "Agendar Discovery para Healthcare"
+      },
+      "useCases": {
+        "headline": "Casos de uso",
+        "items": [
+          { "label": "01", "title": "Triagem médica", "body": "Human-in-the-loop obrigatório em triagem. O agente coleta, classifica e encaminha, a decisão clínica permanece humana." },
+          { "label": "02", "title": "Agendamento e navegação", "body": "Integração a sistemas hospitalares (HL7, FHIR). Navegação de paciente com contexto clínico preservado entre canais." },
+          { "label": "03", "title": "Suporte administrativo", "body": "Anonimização de dados clínicos nativa em todas as saídas. Conformidade HIPAA e LGPD por design." }
+        ]
+      },
+      "ctaBanner": { "title": "Vamos conversar sobre o seu cenário?", "sub": "60 minutos · sem custo · sob NDA", "button": "Agendar Discovery para Healthcare" }
+    },
+    "retail": {
+      "meta": { "title": "Varejo Enterprise | Tessera" },
+      "breadcrumb": ["Home", "Indústrias", "Varejo"],
+      "hero": {
+        "headline": "Atendimento omnichannel que escala sem perder contexto.",
+        "subline": "Identidade unificada do cliente entre todos os canais. Personalização com guardrails. Suporte integrado a logística e estoque em tempo real.",
+        "cta": "Agendar Discovery para Varejo"
+      },
+      "useCases": {
+        "headline": "Casos de uso",
+        "items": [
+          { "label": "01", "title": "Atendimento omnichannel", "body": "Mesmo agente em WhatsApp, web, voz e app, com identidade unificada e histórico preservado entre canais." },
+          { "label": "02", "title": "Personalização contextual", "body": "Guardrails de compliance comercial, promoções, políticas de troca, limites de desconto, definidos por analistas de negócio." },
+          { "label": "03", "title": "Suporte pós-venda", "body": "Integração a sistemas de logística e estoque. Status de pedido, troca e devolução, resolvidos sem escalation humano desnecessário." }
+        ]
+      },
+      "ctaBanner": { "title": "Vamos conversar sobre o seu cenário?", "sub": "60 minutos · sem custo · sob NDA", "button": "Agendar Discovery para Varejo" }
+    },
+    "telecom": {
+      "meta": { "title": "Telecom | Tessera" },
+      "breadcrumb": ["Home", "Indústrias", "Telecom"],
+      "hero": {
+        "headline": "Volume, velocidade e retenção, com regras que não erram.",
+        "subline": "Atendimento técnico multi-canal, vendas com BRMS para elegibilidade de plano e retenção proativa integrada a churn prediction.",
+        "cta": "Agendar Discovery para Telecom"
+      },
+      "useCases": {
+        "headline": "Casos de uso",
+        "items": [
+          { "label": "01", "title": "Atendimento técnico", "body": "Multi-canal com integração a sistemas de provisionamento. Diagnóstico e resolução automatizados com escalation controlado." },
+          { "label": "02", "title": "Vendas com BRMS", "body": "Regras de elegibilidade de plano determinísticas. O agente oferece, mas só o que a regra permite." },
+          { "label": "03", "title": "Retenção proativa", "body": "Integração a sistemas de churn prediction. Oferta personalizada no momento certo, com guardrails comerciais." }
+        ]
+      },
+      "ctaBanner": { "title": "Vamos conversar sobre o seu cenário?", "sub": "60 minutos · sem custo · sob NDA", "button": "Agendar Discovery para Telecom" }
+    }
+  },
+  "whySciensaPage": {
+    "meta": { "title": "Por que Sciensa | Tessera" },
+    "breadcrumb": ["Home", "Por que Sciensa"],
+    "hero": {
+      "headline": "Construída por quem já opera agentes em produção.",
+      "subline": "Tessera não nasceu de uma consultoria que decidiu virar produto. É a destilação de 2+ anos operando agentes IA em produção bancária regulada no Brasil, com todos os erros, cicatrizes e lições aprendidas no caminho."
+    },
+    "differentials": {
+      "headline": "Diferenciais da Sciensa como vendor",
+      "items": [
+        { "title": "Caso próprio em produção desde 2024", "body": "Sciensa opera agentes IA bancários. Tessera nasceu desse caso. Você não está sendo cobaia, está usando o que já funciona." },
+        { "title": "Time técnico residente no Brasil", "body": "Não é vendor americano com SDR local. Engenharia, suporte e gerência são brasileiros, no mesmo fuso, na mesma língua." },
+        { "title": "Multi-vendor por princípio", "body": "Não revendemos AWS, Anthropic, Google ou Microsoft. Somos parceiros oficiais de todos, e recomendamos a combinação certa para cada caso." },
+        { "title": "Compliance PT-BR como pré-requisito", "body": "LGPD, BACEN 4.658 e exigências de auditoria brasileira já estão na plataforma. Não são adendos, são pré-requisitos de design." },
+        { "title": "Sciensa Academy", "body": "Seu time treinado em paralelo à implementação. Você ganha autonomia operacional, não dependência do vendor." },
+        { "title": "Source escrow garantido", "body": "Para Enterprise e Air-Gapped: código-fonte em escrow legal (NCC Group ou Iron Mountain). Sua operação não depende da nossa existência." }
+      ]
+    },
+    "faq": {
+      "headline": "FAQ de confiança",
+      "items": [
+        { "q": "Vocês competem com Anthropic, Google e AWS?", "a": "Não. Eles oferecem os modelos. Tessera opera agentes construídos sobre esses modelos em ambiente corporativo. Somos complementares, e parceiros oficiais de múltiplos vendors." },
+        { "q": "E se a Sciensa sumir?", "a": "Para Enterprise e Air-Gapped, código-fonte depositado em escrow legal com gatilho contratual para liberação. Cliente assume operação sem perda de capability." },
+        { "q": "Tessera é open-source?", "a": "Não. Licença proprietária fechada. Community tem distribuição gratuita para uso não-comercial. O modelo proprietário garante SLA, evolução coordenada e suporte enterprise." }
+      ]
+    }
+  },
+  "deployment": {
+    "meta": { "title": "Deployment | Tessera" },
+    "breadcrumb": ["Home", "Deployment"],
+    "hero": {
+      "headline": "Do PoC ao Tier 1. No seu ritmo.",
+      "subline": "Quatro edições que acompanham a maturidade da sua organização, sem lock-in de edição. Multi-cloud, BYOC, on-premise ou air-gapped."
+    },
+    "infra": {
+      "headline": "Flexibilidade de infraestrutura",
+      "sub": "A Tessera roda onde você precisar. Seus dados nunca saem da sua infraestrutura.",
+      "items": [
+        { "title": "Multi-cloud", "body": "AWS, GCP ou Azure. Escolha o provider e alterne sem reescrever nada." },
+        { "title": "BYOC, Bring Your Own Cloud", "body": "A Tessera roda na sua própria conta cloud. Zero dados fora da sua infraestrutura. Padrão em todas as edições pagas." },
+        { "title": "On-Premise", "body": "Deploy total no datacenter do cliente. Para requisitos de soberania de dados ou regulação governamental." },
+        { "title": "Air-Gapped", "body": "Zero comunicação outbound. Source escrow legal. Para bancos Tier 1 e setor público." }
+      ]
+    },
+    "editions": {
+      "headline": "Quatro edições",
+      "linkLabel": "Ver detalhes",
+      "items": [
+        { "slug": "community", "price": "Grátis", "title": "Community", "body": "Single-tenant · 1 nó. Para experimentação e PoC. Gratuita para uso não-comercial.", "featured": false },
+        { "slug": "professional", "price": "A partir de R$ 350k/ano", "title": "Professional", "body": "Multi-tenant · 3 nós · SLA business hours. Para fintechs e scale-ups.", "featured": false },
+        { "slug": "enterprise", "price": "A partir de R$ 1.2M/ano", "title": "Enterprise", "body": "Multi-tenancy ilimitada · SLA 24×7 · BRMS completo · Gerente dedicado. Para bancos e seguradoras.", "featured": true, "badge": "Recomendada" },
+        { "slug": "air-gapped", "price": "A partir de R$ 2.8M/ano", "title": "Air-Gapped", "body": "100% on-premise · Zero outbound · Source escrow. Para Tier 1 e setor público.", "featured": false }
+      ]
+    },
+    "journey": {
+      "headline": "Jornada de adoção",
+      "diagramAlt": "Timeline: Discovery (2 sem) → Pilot (8–12 sem) → Production (rolling)",
+      "items": [
+        { "title": "Fase 1, Discovery", "body": "2 semanas · gratuita para qualificados. Sessão executiva + workshop técnico + mapeamento de caso. Entregável: relatório de viabilidade." },
+        { "title": "Fase 2, Pilot", "body": "8–12 semanas · escopo contratado. Implementação do caso prioritário, integração, treinamento da equipe. Entregável: agente em produção piloto." },
+        { "title": "Fase 3, Production", "body": "Rolling · contrato anual. Rollout completo, suporte SLA, QBR com C-level. Entregável contínuo: plataforma operando." }
+      ]
+    },
+    "tiers": {
+      "community": {
+        "meta": { "title": "Community Edition | Tessera" },
+        "breadcrumb": ["Home", "Deployment", "Community"],
+        "headline": "Comece agora. Grátis.",
+        "sub": "Single-tenant, single-node. Para experimentação, PoC e equipes técnicas avaliando a plataforma.",
+        "blocks": [
+          { "title": "O que inclui", "body": "Runtime completo · Studio · Console · Simulator · Ferramentas essenciais · 1 nó · Gratuita para uso não-comercial" },
+          { "title": "O que não inclui", "body": "Multi-tenancy · SLA contratual · BRMS completo · Suporte enterprise" }
+        ],
+        "cta": { "label": "Começar agora → Quickstart", "href": "/docs/quickstart" }
+      },
+      "professional": {
+        "meta": { "title": "Professional Edition | Tessera" },
+        "breadcrumb": ["Home", "Deployment", "Professional"],
+        "headline": "Pronto para produção. Para fintechs e scale-ups.",
+        "blocks": [
+          { "title": "O que inclui", "body": "Multi-tenant até limite contratado · Cluster 3 nós · Mensageria distribuída · SLA business hours · Suporte contratual" },
+          { "title": "Investimento", "body": "A partir de R$ 350k/ano (licença) + consumo operacional" }
+        ],
+        "cta": { "label": "Agendar Discovery →", "href": "/discovery" }
+      },
+      "enterprise": {
+        "meta": { "title": "Enterprise Edition | Tessera" },
+        "breadcrumb": ["Home", "Deployment", "Enterprise"],
+        "headline": "O padrão para bancos e seguradoras.",
+        "blocks": [
+          { "title": "O que inclui", "body": "Multi-tenancy ilimitada · Cluster sem limite · Criptografia em nível de campo · BRMS completo · OPA · SLA 24×7 · Gerente de conta dedicado" },
+          { "title": "Investimento", "body": "A partir de R$ 1.2M/ano (licença) + consumo operacional" }
+        ],
+        "cta": { "label": "Agendar Discovery →", "href": "/discovery" }
+      },
+      "air-gapped": {
+        "meta": { "title": "Air-Gapped Edition | Tessera" },
+        "breadcrumb": ["Home", "Deployment", "Air-Gapped"],
+        "headline": "Soberania total de dados. Para Tier 1 e setor público.",
+        "blocks": [
+          { "title": "O que inclui", "body": "100% on-premise · Zero comunicação outbound · Source code escrow (NCC Group / Iron Mountain) · Implementação dedicada" },
+          { "title": "Investimento", "body": "A partir de R$ 2.8M/ano (licença) + implementação dedicada. TCO detalhado disponível sob NDA." }
+        ],
+        "cta": { "label": "Falar com time enterprise →", "href": "/discovery" }
+      }
+    }
+  },
+  "pricing": {
+    "meta": { "title": "Pricing | Tessera" },
+    "breadcrumb": ["Home", "Pricing"],
+    "hero": {
+      "headline": "Pague pelo que usa. Escale sem surpresa.",
+      "subline": "Modelo consumption-based com tiers por edition, sem desperdício de over-provisioning."
+    },
+    "model": {
+      "headline": "Modelo de precificação",
+      "headers": ["Componente", "Modelo"],
+      "rows": [
+        { "component": "Licença anual da edition", "model": "Tier fixo por edition, escala com tamanho da organização" },
+        { "component": "Consumo operacional", "model": "Por runs, tokens LLM e tool calls externas, com volume discounts" },
+        { "component": "Implementação inicial", "model": "Projeto fechado, escopo definido na Fase 1 (Discovery)" },
+        { "component": "Suporte e operação", "model": "Incluído na licença anual, white-glove disponível" }
+      ]
+    },
+    "ranges": {
+      "headline": "Faixas indicativas",
+      "items": [
+        { "title": "Community", "body": "Gratuita para uso não-comercial.", "featured": false },
+        { "title": "Professional", "body": "A partir de R$ 350k/ano + consumo operacional.", "featured": false },
+        { "title": "Enterprise", "body": "A partir de R$ 1.2M/ano + consumo operacional.", "featured": true },
+        { "title": "Air-Gapped", "body": "A partir de R$ 2.8M/ano + implementação dedicada.", "featured": false }
+      ],
+      "note": "TCO detalhado e calculadora disponíveis sob NDA na fase de Discovery."
+    },
+    "ctaBanner": {
+      "title": "Quer entender qual edição faz sentido para você?",
+      "sub": "A Discovery é gratuita e já define o fit de edição.",
+      "button": "Agendar Discovery"
+    }
+  },
+  "docs": {
+    "sidebar": [
+      { "title": "Começando", "items": [ { "label": "Quickstart", "href": "/docs/quickstart" } ] },
+      { "title": "Plataforma", "items": [
+        { "label": "Arquitetura", "href": "/docs/platform/architecture" },
+        { "label": "Runtime", "href": "/docs/platform/runtime" },
+        { "label": "Studio", "href": "/docs/platform/studio" },
+        { "label": "Console", "href": "/docs/platform/console" },
+        { "label": "Simulator", "href": "/docs/platform/simulator" },
+        { "label": "Deploy", "href": "/docs/platform/deploy" }
+      ] },
+      { "title": "Capabilities", "items": [
+        { "label": "Compliance", "href": "/docs/capabilities/compliance" },
+        { "label": "FinOps", "href": "/docs/capabilities/finops" },
+        { "label": "BRMS", "href": "/docs/capabilities/brms" },
+        { "label": "Multi-tenancy", "href": "/docs/capabilities/multi-tenancy" },
+        { "label": "Observabilidade", "href": "/docs/capabilities/observability" }
+      ] },
+      { "title": "Integrações", "items": [
+        { "label": "LLM Providers", "href": "/docs/integrations/llm-providers" },
+        { "label": "ERP", "href": "/docs/integrations/erp" },
+        { "label": "CRM", "href": "/docs/integrations/crm" },
+        { "label": "Canais", "href": "/docs/integrations/channels" },
+        { "label": "Banking BR", "href": "/docs/integrations/banking" },
+        { "label": "Custom Tools", "href": "/docs/integrations/custom-tools" }
+      ] },
+      { "title": "API", "items": [
+        { "label": "API Reference", "href": "/docs/api/reference" },
+        { "label": "SDK", "href": "/docs/api/sdk" },
+        { "label": "MCP", "href": "/docs/api/mcp" }
+      ] }
+    ],
+    "pages": {
+      "quickstart": {
+        "breadcrumb": "Docs / Quickstart",
+        "title": "Quickstart",
+        "blocks": [
+          { "t": "p", "text": "Rode seu primeiro agente Tessera em menos de 30 minutos." },
+          { "t": "h2", "text": "Pré-requisitos" },
+          { "t": "ul", "items": ["JVM 21+ instalada", "Docker Desktop rodando", "Chave de API de um LLM provider (Anthropic ou OpenAI)"] },
+          { "t": "h2", "text": "1. Instalar a Community Edition" },
+          { "t": "code", "lines": ["docker pull sciensa/tessera-community:latest", "docker run -p 8080:8080 sciensa/tessera-community:latest"] },
+          { "t": "h2", "text": "2. Abrir o Tessera Studio" },
+          { "t": "p", "text": "Acesse http://localhost:8080/studio no seu browser. O Studio é o ambiente visual de composição de agentes." },
+          { "t": "h2", "text": "3. Criar seu primeiro agente" },
+          { "t": "p", "text": "No Studio, clique em \"New Agent\". Dê um nome, selecione o modelo LLM e adicione o primeiro nó de triagem." },
+          { "t": "code", "lines": ["agent:", "  name: meu-primeiro-agente", "  model: claude-sonnet-4-6", "  nodes:", "    - id: start", "      type: entry", "    - id: responder", "      type: llm-call"] },
+          { "t": "h2", "text": "4. Executar e verificar no Console" },
+          { "t": "p", "text": "Clique em \"Deploy local\" no Studio. Acesse o Console em http://localhost:8080/console para ver a run em tempo real." },
+          { "t": "h2", "text": "Próximos passos" },
+          { "t": "links", "links": [
+            { "label": "Guia completo do Studio", "href": "/docs/platform/studio" },
+            { "label": "Entender o modelo de execução", "href": "/docs/platform/runtime" },
+            { "label": "Adicionar regras de negócio com BRMS", "href": "/docs/capabilities/brms" }
+          ] }
+        ]
+      },
+      "platform/architecture": {
+        "breadcrumb": "Docs / Plataforma / Arquitetura",
+        "title": "Arquitetura da Tessera",
+        "blocks": [
+          { "t": "p", "text": "A Tessera é organizada em 5 camadas que atravessam dois pilares verticais." },
+          { "t": "img", "alt": "Diagrama detalhado das 5 camadas + pilares" },
+          { "t": "h2", "text": "Interaction Surfaces" },
+          { "t": "p", "text": "5 modos de comunicação com o agente: conversacional, programático, event-driven, A2A e scheduled." },
+          { "t": "h2", "text": "Runtime, Agent Core" },
+          { "t": "p", "text": "Orquestrador com grafo de estado distribuído, tool calling, memória e contexto, middleware stack, BRMS e identity & persona." },
+          { "t": "h2", "text": "Foundation Services" },
+          { "t": "p", "text": "Multi-tenancy, lifecycle, policy engine, quotas & limits, secrets vault, a camada que garante operação enterprise." },
+          { "t": "h2", "text": "Connectivity & Action" },
+          { "t": "p", "text": "LLM providers, enterprise systems, data layer, domain rails e custom tools, onde o agente alcança o mundo externo." },
+          { "t": "h2", "text": "Pilares verticais" },
+          { "t": "p", "text": "Compliance & Governance (esquerda) e Observability & FinOps (direita) atravessam todas as camadas horizontais." }
+        ]
+      },
+      "platform/runtime": {
+        "breadcrumb": "Docs / Plataforma / Runtime",
+        "title": "Runtime & Modelo de Execução",
+        "blocks": [
+          { "t": "p", "text": "Cada agente Tessera é um grafo de estado distribuído construído sobre Actor Model." },
+          { "t": "h2", "text": "Grafo de estado" },
+          { "t": "p", "text": "Nós são funções tipadas que recebem estado, invocam LLMs/ferramentas/regras e retornam atualizações de estado + decisão de próximo nó." },
+          { "t": "h2", "text": "Supersteps atômicos" },
+          { "t": "p", "text": "A execução é dividida em supersteps. Cada superstep persiste o estado completo antes de avançar. Crash, queda de rede ou restart do pod são absorvidos sem perda de contexto." },
+          { "t": "code", "lines": ["superstep:", "  - classify_intent → persist state", "  - validate_eligibility (BRMS) → persist state", "  - generate_response (LLM) → persist state", "  - deliver_response"] },
+          { "t": "h2", "text": "Replay determinístico" },
+          { "t": "p", "text": "Qualquer conversa pode ser reproduzida do início até qualquer ponto com inputs externos mockados. Use o Simulator para análise forense ou debugging." },
+          { "t": "h2", "text": "Audit trail" },
+          { "t": "p", "text": "Toda transição de estado, invocação de modelo e chamada de ferramenta registrada com correlation ID e timestamp imutável em log append-only." },
+          { "t": "h2", "text": "Os 3 princípios não-negociáveis" },
+          { "t": "ul", "items": [
+            { "b": "Determinismo por design", "text": ", replay integral a partir de checkpoint" },
+            { "b": "Hexagonalidade", "text": ", domínio isolado da infraestrutura (cloud, banco, LLM)" },
+            { "b": "Distribuição nativa", "text": ", Actor Model com tolerância a falhas e back-pressure" }
+          ] }
+        ]
+      },
+      "platform/studio": {
+        "breadcrumb": "Docs / Plataforma / Studio",
+        "title": "Tessera Studio",
+        "blocks": [
+          { "t": "p", "text": "Ambiente visual de composição de agentes em grafo. Nós tipados, integrações pré-aprovadas, biblioteca de componentes acessível por busca." },
+          { "t": "h2", "text": "Interface" },
+          { "t": "p", "text": "Canvas central com o grafo do agente. Painel direito com componentes disponíveis (modelos, ferramentas, sub-agentes). Painel superior com pipeline de deploy." },
+          { "t": "h2", "text": "Tipos de nós" },
+          { "t": "ul", "items": ["Entry / Exit", "LLM Call", "Tool Call", "BRMS Decision", "Human Escalation", "Sub-agent", "Condition"] },
+          { "t": "h2", "text": "Deploy" },
+          { "t": "p", "text": "Clique em \"Deploy\" para promover para o ambiente selecionado. O pipeline auditável executa pre-flight checks automaticamente." }
+        ]
+      },
+      "platform/console": {
+        "breadcrumb": "Docs / Plataforma / Console",
+        "title": "Tessera Console",
+        "blocks": [
+          { "t": "p", "text": "Ambiente de operação em produção. Visualize runs, aprove ações pendentes, investigue incidentes e exporte dados para reconciliação." },
+          { "t": "h2", "text": "Runs" },
+          { "t": "p", "text": "Lista paginada de todas as execuções de agente com filtros por status, tenant, agente, intervalo de tempo. Exportação CSV para reconciliação contábil." },
+          { "t": "h2", "text": "Threads" },
+          { "t": "p", "text": "Visualização de uma conversa completa com todos os supersteps, estado em cada checkpoint e custo agregado." },
+          { "t": "h2", "text": "Approvals" },
+          { "t": "p", "text": "Fila de aprovações 4-eyes pendentes. Aprovar ou rejeitar com justificativa, log imutável da decisão." },
+          { "t": "h2", "text": "Incidents" },
+          { "t": "p", "text": "Alertas automáticos de anomalias, erros acima do threshold, custo acima do budget cap, latência fora do SLA." }
+        ]
+      },
+      "platform/simulator": {
+        "breadcrumb": "Docs / Plataforma / Simulator",
+        "title": "Tessera Simulator",
+        "blocks": [
+          { "t": "p", "text": "Replay determinístico de qualquer caso real ou sintético. Estado observável passo a passo. Prontidão forense para auditoria." },
+          { "t": "h2", "text": "Carregar um caso" },
+          { "t": "p", "text": "Selecione uma run existente do Console ou faça upload de um arquivo JSON de entrada sintética. O Simulator recria o estado inicial completo." },
+          { "t": "h2", "text": "Breakpoints e watches" },
+          { "t": "p", "text": "Defina breakpoints em nós específicos do grafo. Adicione watches para observar valores de estado em tempo real durante o replay." },
+          { "t": "h2", "text": "Análise de custo" },
+          { "t": "p", "text": "Cada superstep mostra o custo em tokens e USD. Identifique nós caros e otimize o grafo antes de promover para produção." }
+        ]
+      },
+      "platform/deploy": {
+        "breadcrumb": "Docs / Plataforma / Deploy",
+        "title": "Pipeline de Deploy",
+        "blocks": [
+          { "t": "p", "text": "Promoção controlada entre ambientes: Draft → Dev → Staging → Production." },
+          { "t": "h2", "text": "Pre-flight checks" },
+          { "t": "ul", "items": ["YAML lint", "Schema validate", "Smoke tests (dataset de casos)", "Eval suite golden", "Cost delta check", "Secrets scan"] },
+          { "t": "h2", "text": "Aprovação 4-eyes" },
+          { "t": "p", "text": "Toda promoção para Staging ou Production exige aprovação de um segundo responsável. O log registra quem aprovou e quando." },
+          { "t": "h2", "text": "Estratégias de rollout" },
+          { "t": "ul", "items": ["Canary 10% → 25% → 100%", "All at once", "Shadow (produção paralela sem impacto no usuário)"] }
+        ]
+      },
+      "capabilities/compliance": {
+        "breadcrumb": "Docs / Capabilities / Compliance",
+        "title": "Compliance & Governance",
+        "blocks": [
+          { "t": "p", "text": "Referência técnica completa das capabilities de compliance da Tessera." },
+          { "t": "h2", "text": "Audit trail imutável" },
+          { "t": "p", "text": "Event sourcing com log append-only. Hash criptográfico por evento. Exportável via API ou CSV para qualquer SIEM." },
+          { "t": "h2", "text": "Aprovação 4-eyes" },
+          { "t": "p", "text": "Configure thresholds por tenant. Define aprovadores por role (RBAC). Workflow nativo no Console." },
+          { "t": "h2", "text": "Anonimização de PII" },
+          { "t": "p", "text": "Campos reconhecidos automaticamente: CPF, CNPJ, RG, CNH, cartão de crédito, e-mail, telefone. Política configurável por tipo e por tenant: hash, mask ou redact." },
+          { "t": "h2", "text": "Regulatory packs" },
+          { "t": "p", "text": "LGPD, BACEN 4.658, EU AI Act, SOX, HIPAA, ISO 42001. Cada pack inclui: policies aplicáveis, matriz ameaça → controle → evidência, checklist de auditoria." }
+        ]
+      },
+      "capabilities/finops": {
+        "breadcrumb": "Docs / Capabilities / FinOps",
+        "title": "FinOps de Agentes",
+        "blocks": [
+          { "t": "p", "text": "Controle financeiro completo sobre o uso de IA na sua organização." },
+          { "t": "h2", "text": "Cost attribution" },
+          { "t": "p", "text": "Dimensões: tenant · ambiente · agente · conversa · canal · usuário. Granularidade configurável por contrato." },
+          { "t": "h2", "text": "Budget caps" },
+          { "t": "p", "text": "Hard cap: agente para automaticamente. Soft cap: alerta progressivo. Configurável por tenant × ambiente." },
+          { "t": "h2", "text": "Otimização automática" },
+          { "t": "p", "text": "Tessera analisa padrões de uso e sugere trocas de modelo. Ex: Sonnet → Haiku em conversas simples. Economia média 40–60% em workloads rotineiras." }
+        ]
+      },
+      "capabilities/brms": {
+        "breadcrumb": "Docs / Capabilities / BRMS",
+        "title": "BRMS, Motor de Regras",
+        "blocks": [
+          { "t": "p", "text": "Decisões determinísticas que o agente não pode contornar." },
+          { "t": "h2", "text": "DMN, Decision Model and Notation" },
+          { "t": "p", "text": "Crie decision tables no Studio ou importe de arquivos .dmn. Versionadas automaticamente com diff visual." },
+          { "t": "h2", "text": "Decision tables Excel" },
+          { "t": "p", "text": "Analistas de negócio editam regras diretamente em Excel. Import via UI ou API. Hot reload sem redeploy do agente." },
+          { "t": "h2", "text": "Hot reload" },
+          { "t": "p", "text": "Atualize uma regra sem reiniciar o agente. Rollout canary disponível para mudanças de alto impacto." },
+          { "t": "h2", "text": "Composição com LLM" },
+          { "t": "p", "text": "O agente chama o BRMS como um nó do grafo. O LLM decide o quê fazer. O BRMS decide o se pode. Camadas distintas, responsabilidades distintas." }
+        ]
+      },
+      "capabilities/multi-tenancy": {
+        "breadcrumb": "Docs / Capabilities / Multi-tenancy",
+        "title": "Multi-tenancy e Isolamento",
+        "blocks": [
+          { "t": "p", "text": "Isolamento completo de dados e configuração entre tenants por arquitetura." },
+          { "t": "h2", "text": "Isolamento de dados" },
+          { "t": "p", "text": "Row-level security em PostgreSQL. Prefix-based em Redis. Nenhuma query de um tenant acessa dados de outro." },
+          { "t": "h2", "text": "Quotas por tenant" },
+          { "t": "p", "text": "Taxa máxima de requests/min, custo máximo/dia, agentes simultâneos. Configurável no Admin." },
+          { "t": "h2", "text": "Configuration por tenant" },
+          { "t": "p", "text": "Modelos preferidos, providers padrão, políticas de compliance, branding em saídas, tudo configurável individualmente." }
+        ]
+      },
+      "capabilities/observability": {
+        "breadcrumb": "Docs / Capabilities / Observabilidade",
+        "title": "Observabilidade",
+        "blocks": [
+          { "t": "h2", "text": "Métricas (Prometheus)" },
+          { "t": "p", "text": "runs_total, runs_success_rate, run_latency_p99, tokens_consumed, cost_usd, por tenant, agente e ambiente." },
+          { "t": "h2", "text": "Traces (OpenTelemetry)" },
+          { "t": "p", "text": "Trace distribuído de cada superstep. Integração com Jaeger, Grafana Tempo, Datadog APM." },
+          { "t": "h2", "text": "Logs estruturados" },
+          { "t": "p", "text": "JSON com correlation_id, tenant_id, agent_id, run_id, step, model, tokens, cost. Integração com Datadog, Langfuse, ELK." }
+        ]
+      },
+      "integrations/llm-providers": {
+        "breadcrumb": "Docs / Integrações / LLM Providers",
+        "title": "LLM Providers",
+        "blocks": [
+          { "t": "p", "text": "Tessera é agnóstica de modelo. Configure múltiplos providers e alterne sem reescrever o agente." },
+          { "t": "h2", "text": "Providers suportados" },
+          { "t": "ul", "items": ["Anthropic Claude (Sonnet, Opus, Haiku)", "OpenAI GPT", "Google Gemini", "AWS Bedrock (Titan, Llama, Mistral)", "Modelos privados via endpoint OpenAI-compatible"] },
+          { "t": "h2", "text": "Configuração" },
+          { "t": "code", "lines": ["llm:", "  provider: anthropic", "  model: claude-sonnet-4-6", "  fallback: claude-haiku-4-5"] }
+        ]
+      },
+      "integrations/erp": {
+        "breadcrumb": "Docs / Integrações / ERP",
+        "title": "ERP",
+        "blocks": [
+          { "t": "p", "text": "Conectores nativos para o stack ERP corporativo brasileiro." },
+          { "t": "h2", "text": "TOTVS (Protheus, RM, Datasul)" },
+          { "t": "p", "text": "Autenticação via API key ou OAuth. Operações de leitura e escrita com guardrails configuráveis. Retry automático com backoff exponencial." },
+          { "t": "h2", "text": "SAP" },
+          { "t": "p", "text": "Integração via RFC ou OData. Suporte a SAP S/4HANA e ECC." },
+          { "t": "h2", "text": "Oracle" },
+          { "t": "p", "text": "Conexão via JDBC com SQL read-only por padrão. Escrita requer policy explícita." }
+        ]
+      },
+      "integrations/crm": {
+        "breadcrumb": "Docs / Integrações / CRM",
+        "title": "CRM",
+        "blocks": [
+          { "t": "ul", "items": ["Salesforce, REST API + Streaming API", "ServiceNow, REST API + Webhooks", "HubSpot, REST API", "Zendesk, REST API + Webhooks"] }
+        ]
+      },
+      "integrations/channels": {
+        "breadcrumb": "Docs / Integrações / Canais",
+        "title": "Canais de Comunicação",
+        "blocks": [
+          { "t": "ul", "items": ["WhatsApp Business, Cloud API + On-Premise", "Telegram, Bot API", "Instagram, Messenger API", "Email, AWS SES, SendGrid", "SMS, Twilio, SinchSMS", "Voice, Twilio, com voice profile registry"] }
+        ]
+      },
+      "integrations/banking": {
+        "breadcrumb": "Docs / Integrações / Banking BR",
+        "title": "Banking BR",
+        "blocks": [
+          { "t": "ul", "items": ["PIX, integração com PSPs, idempotência garantida", "SWIFT, mensagens MT/MX", "KYC providers, Serasa, Boa Vista, Quod", "Score de crédito, integração com BRMS para decisões de elegibilidade"] }
+        ]
+      },
+      "integrations/custom-tools": {
+        "breadcrumb": "Docs / Integrações / Custom Tools",
+        "title": "Custom Tools & MCP",
+        "blocks": [
+          { "t": "h2", "text": "MCP client" },
+          { "t": "p", "text": "Conecte qualquer MCP server externo como ferramenta nativa do agente." },
+          { "t": "h2", "text": "MCP server" },
+          { "t": "p", "text": "Exponha ferramentas internas da Tessera para outros agentes ou sistemas via protocolo MCP." },
+          { "t": "h2", "text": "SDK" },
+          { "t": "p", "text": "Crie ferramentas customizadas em Java ou via HTTP para qualquer linguagem." }
+        ]
+      },
+      "api/reference": {
+        "breadcrumb": "Docs / API / Reference",
+        "title": "API Reference",
+        "blocks": [
+          { "t": "p", "text": "API REST da Tessera para integração programática." },
+          { "t": "h2", "text": "Autenticação" },
+          { "t": "code", "lines": ["Authorization: Bearer {token}"] },
+          { "t": "h2", "text": "Endpoints principais" },
+          { "t": "ul", "items": ["POST /api/v1/runs, iniciar uma run", "GET /api/v1/runs/{id}, consultar status", "GET /api/v1/runs/{id}/replay, replay determinístico", "GET /api/v1/tenants/{id}/billing, dados de custo", "POST /api/v1/approvals/{id}/approve, aprovar 4-eyes"] }
+        ]
+      },
+      "api/sdk": {
+        "breadcrumb": "Docs / API / SDK",
+        "title": "SDK",
+        "blocks": [
+          { "t": "h2", "text": "Java SDK" },
+          { "t": "code", "lines": ["implementation 'ai.sciensa:tessera-sdk:1.0.0'"] },
+          { "t": "p", "text": "TesseraClient, AgentRunner, RunResult, classes principais. Compatível com Spring Boot e Quarkus." },
+          { "t": "h2", "text": "HTTP para Python / Node" },
+          { "t": "p", "text": "Use a API REST diretamente. Exemplos disponíveis no repositório de exemplos." }
+        ]
+      },
+      "api/mcp": {
+        "breadcrumb": "Docs / API / MCP",
+        "title": "MCP, Model Context Protocol",
+        "blocks": [
+          { "t": "p", "text": "Tessera implementa MCP client e server nativamente." },
+          { "t": "h2", "text": "Como usar Tessera como MCP server" },
+          { "t": "p", "text": "Qualquer agente ou sistema externo pode chamar ferramentas da Tessera via MCP. Configure o endpoint e as ferramentas expostas no Studio." },
+          { "t": "h2", "text": "Como conectar MCP clients" },
+          { "t": "p", "text": "Adicione um nó MCP Call no grafo do agente. Configure o server URL e as ferramentas disponíveis." }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "brandDesc": "A plataforma AgentOS para empresas que operam IA em ambiente regulado. Construída e mantida pela Sciensa.",
+    "contact": ["tessera@sciensa.ai", "sciensa.ai/tessera/discovery", "São Paulo · Brasil"],
+    "badges": ["BACEN 4.658", "LGPD", "SOX", "HIPAA", "ISO 42001"],
+    "cols": [
+      {
+        "title": "Plataforma",
+        "links": [
+          { "label": "Visão geral", "href": "/platform/overview" },
+          { "label": "Runtime & Execução", "href": "/platform/runtime" },
+          { "label": "Compliance & Governance", "href": "/platform/governance" },
+          { "label": "FinOps", "href": "/platform/finops" },
+          { "label": "Integrações", "href": "/platform/integrations" }
+        ]
+      },
+      {
+        "title": "Indústrias",
+        "links": [
+          { "label": "Banking & Fintechs", "href": "/industries/banking-fintechs" },
+          { "label": "Seguradoras", "href": "/industries/insurance" },
+          { "label": "Healthcare", "href": "/industries/healthcare" },
+          { "label": "Varejo Enterprise", "href": "/industries/retail" },
+          { "label": "Telecom", "href": "/industries/telecom" }
+        ]
+      },
+      {
+        "title": "Empresa",
+        "links": [
+          { "label": "Por que Sciensa", "href": "/why-sciensa" },
+          { "label": "Modelos de deployment", "href": "/deployment" },
+          { "label": "Pricing", "href": "/pricing" },
+          { "label": "Agendar Discovery", "href": "/discovery" }
+        ]
+      },
+      {
+        "title": "Docs",
+        "links": [
+          { "label": "Quickstart", "href": "/docs/quickstart" },
+          { "label": "Arquitetura", "href": "/docs/platform/architecture" },
+          { "label": "Runtime", "href": "/docs/platform/runtime" },
+          { "label": "Compliance", "href": "/docs/capabilities/compliance" },
+          { "label": "BRMS", "href": "/docs/capabilities/brms" },
+          { "label": "API Reference", "href": "/docs/api/reference" }
+        ]
+      }
+    ],
+    "copyright": "© 2025 Sciensa Tecnologia. Tessera é uma marca registrada da Sciensa. Todos os direitos reservados.",
+    "legal": ["Política de Privacidade", "Termos de Uso", "NDA / Confidencialidade", "Status da plataforma"]
+  }
+}

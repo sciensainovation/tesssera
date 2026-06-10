@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+
+# project extras (not part of the deployed app)
+/Documenta*
+/public/Prints das telas
+/public/Sora.zip
+/public/Illustration exemple.svg
